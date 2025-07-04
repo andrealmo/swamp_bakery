@@ -33,8 +33,7 @@ Images: Unique custom pixel art created by me in Aseprite
 Form Elements: Fully functional order form with validation
 
 File Structure
-swamp-bakery/
-index.html (main website file)
+swamp-bakery-v1.html (main website file)
 images (pixel arts created for menu items)
 swamp-bakery-logo.png
 moss-muffin.png
