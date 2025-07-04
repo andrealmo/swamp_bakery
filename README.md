@@ -34,12 +34,12 @@ Form Elements: Fully functional order form with validation
 
 File Structure
 swamp-bakery/
-├── index.html          # Main website file
-└── images/             # Placeholder for bakery images
-    ├── swamp-bakery-logo.jpg
-    ├── moss-muffin.jpg
-    ├── bog-croissant.jpg
-    └── swamp-latte.jpg
+index.html (main website file)
+images (pixel arts created for menu items)
+swamp-bakery-logo.png
+moss-muffin.png
+bog-croissant.png
+swamp-latte.png
 
 Future Enhancements
 - Pixel art font
