@@ -39,11 +39,3 @@ swamp-bakery-logo.png
 moss-muffin.png
 bog-croissant.png
 swamp-latte.png
-
-Future Enhancements
-- Pixel art font
-- Expand menu
-- Add JavaScript for form validation and interactive features
-- Implement a shopping cart system
-- Add location and contact information
-- Include customer reviews section
