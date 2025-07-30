@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAMP BAKERY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background-color: #3e443c;
+            color: #bed69e;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #555c45;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 3px solid #828c51;
+        }
+
+        #header-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            border: 3px solid #a6b96f;
+            background-color: #bed69e;
+        }
+
+        h1 {
+            font-family: 'Pixelify Sans', monospace;
+            font-size: 3rem;
+            color: #bed69e;
+            text-shadow: 2px 2px 0px #3e443c, 4px 4px 0px #555c45;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: #a6b96f;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #bed69e;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .about-section {
+            background-color: #555c45;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            border: 2px solid #828c51;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #bed69e;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Pixelify Sans', monospace;
+            font-size: 2.5rem;
+            color: #a6b96f;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        article {
+            background-color: #555c45;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid #828c51;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            border-color: #a6b96f;
+        }
+
+        article img {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            background-color: #828c51;
+            border: 2px solid #a6b96f;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #bed69e;
+            margin-bottom: 0.5rem;
+        }
+
+        article p {
+            color: #a6b96f;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-style: italic;
+            color: #bed69e;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .order-form {
+            background-color: #555c45;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid #828c51;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            color: #bed69e;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input[type="number"], textarea, input[type="radio"], input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        input[type="number"] {
+            width: 80px;
+            padding: 0.5rem;
+            border: 2px solid #828c51;
+            border-radius: 5px;
+            background-color: #3e443c;
+            color: #bed69e;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 2px solid #828c51;
+            border-radius: 5px;
+            background-color: #3e443c;
+            color: #bed69e;
+            min-height: 100px;
+            font-family: Georgia, serif;
+        }
+
+        .radio-group, .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-option, .checkbox-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #3e443c;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid #828c51;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .radio-option:hover, .checkbox-option:hover {
+            border-color: #a6b96f;
+        }
+
+        .radio-option input, .checkbox-option input {
+            margin-bottom: 0.5rem;
+        }
+
+        .radio-option img, .checkbox-option img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            border: 2px solid #828c51;
+        }
+
+        .radio-option label, .checkbox-option label {
+            color: #a6b96f;
+            text-align: center;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #828c51;
+            color: #3e443c;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a6b96f;
+        }
+
+        /* Customer Feedback Carousel */
+        .customer-feedback {
+            background-color: #555c45;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid #828c51;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .carousel-slide {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .carousel-slide.active {
+            display: flex;
+        }
+
+        .customer-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            border: 2px solid #a6b96f;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .customer-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #bed69e;
+            margin-bottom: 0.5rem;
+        }
+
+        .customer-comment {
+            font-style: italic;
+            color: #a6b96f;
+            line-height: 1.5;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #828c51;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background-color: #a6b96f;
+        }
+
+        footer {
+            background-color: #555c45;
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 3px solid #828c51;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            color: #a6b96f;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            main {
+                padding: 1rem;
+            }
+
+            .radio-group, .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="header-img" src="assets/swamp_bakery_logo_1_lilypad.png" alt="Swamp Bakery Logo">
+        <h1>SWAMP BAKERY</h1>
+        <nav>
+            <a href="#menu">Menu</a>
+            <a href="#order-form">Place Order</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about-section">
+            <p>Deep in the misty heart of the swamp, where ancient cypress trees whisper secrets and morning fog dances between the branches, lies a hidden culinary treasure. The <i>Swamp Bakery</i> has been serving mystical delicacies to weary travelers and local bog dwellers for generations, transforming the wild bounty of the wetlands into extraordinary confections. Our bakers work by moonlight, infusing each creation with magic that only the swamp can provide. Open daily from dawn to dusk, 6am - 7pm, we invite you to taste the mysterious flavors that emerge from our marsh.</p>
+        </div>
+
+        <section id="menu">
+            <h2>MENU</h2>
+            <div class="menu-grid">
+                <article>
+                    <img src="assets/moss_covered_morning_muffin.png" alt="Moss Muffin">
+                    <h3>Moss Muffin</h3>
+                    <p>A tender buttermilk muffin adorned with our signature green moss frosting, made from wild mint and spirulina. Each bite reveals hidden pockets of sweet bog berry compote.</p>
+                    <p class="price">$3.50</p>
+                </article>
+
+                <article>
+                    <img src="assets/moss_croissant.png" alt="Bog Croissant">
+                    <h3>Bog Croissant</h3>
+                    <p>A buttery, flaky croissant naturally tinted green with spirulina and wild herbs. Stuffed with a rich blend of aged swamp cheese and aromatic marsh herbs that melt into savory perfection.</p>
+                    <p class="price">$2.75</p>
+                </article>
+
+                <article>
+                    <img src="assets/latte_swamp_bakery.png" alt="Swamp Latte">
+                    <h3>Swamp Latte</h3>
+                    <p>A mystical green creation blending premium matcha with creamy pistachio milk and a hint of wild mint. Topped with foam art.</p>
+                    <p class="price">$5.00</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="order-form">
+            <h2>PLACE YOUR ORDER</h2>
+            <form class="order-form">
+                <div class="form-group">
+                    <label for="moss-muffin">Moss Muffins:</label>
+                    <input type="number" id="moss-muffin" name="moss-muffin" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="bog-croissant">Bog Croissants:</label>
+                    <input type="number" id="bog-croissant" name="bog-croissant" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="firefly-bread">Swamp Lattes:</label>
+                    <input type="number" id="swamp-latte" name="swamp-latte" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label>Choose Your Sides:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="swamp-butter" name="sides" value="swamp-butter">
+                            <img src="assets/swamp_butter.png" alt="Wild Swamp Butter">
+                            <label for="swamp-butter">Wild Swamp Butter (+$1)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="bog-jam" name="sides" value="bog-jam">
+                            <img src="assets/bog_jam.png" alt="Bog Berry Jam">
+                            <label for="bog-jam">Bog Berry Jam (+$2)</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="marsh-honey" name="sides" value="marsh-honey">
+                            <img src="assets/marsh_honey.png" alt="Marsh Wildflower Honey">
+                            <label for="marsh-honey">Marsh Wildflower Honey (+$2.50)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Other Beverage Choices (included when ordering a pastry):</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="swamp-tea" name="beverage" value="swamp-tea">
+                            <img src="assets/swamp_tea.png" alt="Mystical Swamp Tea">
+                            <label for="swamp-tea">Mystical Swamp Tea</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="lily-coffee" name="beverage" value="lily-coffee">
+                            <img src="assets/lily_coffee.png" alt="Lily Root Coffee">
+                            <label for="lily-coffee">Lily Root Coffee</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="bog-water" name="beverage" value="bog-water">
+                            <img src="assets/bog_water.png" alt="Sparkling Bog Water">
+                            <label for="bog-water">Sparkling Bog Water</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="special-requests">Special Requests:</label>
+                    <textarea id="special-requests" name="special-requests" placeholder="Tell us how you'd like your items prepared... extra herbs or toppings? We'll make it mystical..."></textarea>
+                </div>
+
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+
+        <section class="customer-feedback">
+            <h2>CUSTOMER FEEDBACK</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide active">
+                    <img src="assets/customer_frog.png" alt="Ribbert Swampington" class="customer-image">
+                    <div class="customer-name">Ribbert Swampington</div>
+                    <div class="customer-comment">"Ribbit! These moss muffins are absolutely croak-tastic! I hop by every morning - they're the perfect start to my lily pad lounging sessions. Ribbit ribbit!"</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/customer_capybara.png" alt="Chillbert Marshmeadow" class="customer-image">
+                    <div class="customer-name">Chillbert Marshmeadow</div>
+                    <div class="customer-comment">"So chill, so good. The bog croissants are incredibly relaxing to munch on while I float in the warm swamp waters. Very zen vibes, my dudes."</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/customer_snake.png" alt="Sssylvia Slitherscale" class="customer-image">
+                    <div class="customer-name">Sssylvia Slitherscale</div>
+                    <div class="customer-comment">"Absssolutely divine! The sswamp latte hassss the perfect blend of flavorsss. I come here every week with my ssscale friendsss - we love it!"</div>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <div class="carousel-dot active" onclick="showSlide(0)"></div>
+                <div class="carousel-dot" onclick="showSlide(1)"></div>
+                <div class="carousel-dot" onclick="showSlide(2)"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2025 - Website and all artwork created by André Almo (also known as <i>almoghost.exe</i> 👻)</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = index;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 5000);
+    </script>
+</body>
+</html>
