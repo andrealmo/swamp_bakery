@@ -8,7 +8,8 @@ The Swamp Bakery is a fictional restaurant website that transports visitors to a
 Features
 - Fully Responsive Design: Works seamlessly on desktop and mobile devices
 - Pixel Art Typography (to be added): Custom styled H1 heading with retro, blocky text effects
-- Swamp-Themed Menu: Three unique items with mystical descriptions
+- Swamp-Themed Menu: Unique items with mystical descriptions
+- Customer Feedback: Swamp-dwelling creatures have their comments shown in the website.
 - Interactive Order Form: Complete ordering system with quantity inputs, sides, beverages, and special requests
 - Custom Color Palette: Five-color scheme inspired by swamp environments
 - Semantic HTML5: Properly structured with accessibility in mind
@@ -17,6 +18,7 @@ Menu Items
 - Moss Muffin - Buttermilk croissant with a natural green topping
 - Bog Croissant - Green croissant with cheese and herbs stuffing
 - Swamp Latte - Matcha and pistachio coffee creation
+- 
 
 Color Palette
 - #3e443c - Dark swamp green (backgrounds)
