@@ -18,7 +18,17 @@ Menu Items
 - Moss Muffin - Buttermilk croissant with a natural green topping
 - Bog Croissant - Green croissant with cheese and herbs stuffing
 - Swamp Latte - Matcha and pistachio coffee creation
-- 
+- Wild Swamp Butter - Magical spread made from wild swamp herbs and botanicals
+- Bog Berry Jam - Mystical preserve made from wild bog berries
+- Marsh Wildflower Honey - Golden honey harvested from mystical swamp blooms
+- Mystical Swamp Tea - Herbal brew made from wild swamp botanicals
+- Lily Root Coffee - Mystical espresso made from enchanted beans that stay green even after roasting
+- Sparkling Bog Water - Refreshing sparkling water sourced from pristine swamp springs
+
+Customers
+- Ribbert Swampington - A charming green and beige frog character wearing a red shirt
+- Chillbert Marshmeadow - A relaxed brown capybara character in a golden-yellow shirt
+- Sssylvia Slitherscale - An elegant purple snake character with a distinctive green slit-eye pupil
 
 Color Palette
 - #3e443c - Dark swamp green (backgrounds)
@@ -36,8 +46,4 @@ Technical Details
 
 File Structure
 - swamp-bakery-v1.html (main website file)
-- images (pixel arts created for menu items)
-- swamp-bakery-logo.png
-- moss-muffin.png
-- bog-croissant.png
-- swamp-latte.png
+- images (pixel arts created for menu items and customers)
